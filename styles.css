@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@300;500;800&display=swap');
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 16px;
+/*#### VARIABLES  #####*/
+    --font-family: 'Saira Condensed', sans-serif; /*300 500 800*/
+    --fs-title: 2rem;
+    --fs-normal: 1.5rem;
+    --fs-tooltip: 1.3rem;
+    --fs-details: 1rem;
+
+    /*Colors*/
+    --color-bg: navy;
+    --color-container: lightgrey;
+    --color-font: navy;
+    --color-bars: skyblue;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--color-bg)
+}
+
+
+.container {
+    font-family: var(--font-family);
+    background-color: var(--color-container);
+    width: 950px;
+    height: 600px;
+    /*padding: 20px;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 52px 14px rgba(0,0,0,0.67);
+}
+
+h1,
+p {
+    margin: 0;
+    color: var(--color-font);
+}
+
+#title {
+    font-size: var(--fs-title);
+}
+
+p {
+    font-size: var(--fs-details);
+}
+
+.label {
+    font-family: var(--font-family);
+    font-size: var(--fs-normal);
+    color: var(--color-font);
+}
+
+.canvas {
+    height: 485px;
+    width: 100%;
+    color: var(--color-font);
+}
+
+.bar {
+    fill: var(--color-font);
+    position: relative;
+}
+
+.bar:hover {
+    fill: var(--color-bars);
+}
+
+#tooltip {
+    position: absolute;
+    pointer-events: none;
+    width: 150px;
+    height: max-content;
+    background-color: var(--color-container);
+    font-size: var(--fs-tooltip);
+    text-align: center;
+    padding: 0.5rem;
+    border-radius: 3px;
+    box-shadow: 0px 0px 124px -8px rgba(0,0,0,0.67);
+}
+
+
+.source {
+    align-self: flex-end;
+    padding-right: 20px;
+}
+
+.attribute  {
+    color: var(--color-container);
+    padding-top: 2rem;
+    text-align: center;
+}
+
+.attribute > a {
+    color: var(--color-container)
+}
