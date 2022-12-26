@@ -1,5 +1,5 @@
 import { testData, dataSet } from './dataset.js';
-
+console.log(screen.width)
 const data = dataSet.data;
 
 let paddingL = 50, paddingR = 10, width = 950, height = 485;
@@ -60,8 +60,13 @@ svg.selectAll('rect')
             .duration(200)
             .style('opacity', 0.9)
         div.html(`${dateTool(info)}`)
-            .style("top", `600px`)
-            .style("left", `${d.pageX + 23}px`);
+            .style("top", `50%`)
+            .style("left", `${d.pageX}px`)
+            .style('transform', () => {
+                if(screen.width <= 1100) {
+                    return `translate(-50%, 0)`
+                } else {return `translate(-100%, 0)`}
+            });
     })
     .on('mouseout', function (d) {
         div.transition()
